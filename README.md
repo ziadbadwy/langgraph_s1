@@ -22,6 +22,8 @@ A full LangGraph workflow that takes any topic, searches the web, researches it,
 
 ## Workflow Architecture
 
+![Graph](assets/graph.png)
+
 ```
 [START]
    │
