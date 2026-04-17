@@ -3,7 +3,7 @@ from llm import ask_llm
 
 
 def summarize_node(state: AgentState) -> AgentState:
-    print("\n📝 Summarizing the research...")
+    print("\nSummarizing the research...")
 
     prompt = f"""
 Summarize the following research into clear bullet points.

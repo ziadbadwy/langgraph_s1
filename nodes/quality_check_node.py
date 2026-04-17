@@ -3,7 +3,7 @@ from llm import ask_llm
 
 
 def quality_check_node(state: AgentState) -> AgentState:
-    print("\n🔎 Checking the draft quality...")
+    print("\nChecking the draft quality...")
 
     prompt = f"""
 You are an editor. Read the draft below and give it a quality score from 1 to 10.

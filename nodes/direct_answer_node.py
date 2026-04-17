@@ -3,7 +3,7 @@ from llm import ask_llm
 
 
 def direct_answer_node(state: AgentState) -> AgentState:
-    print("\n💡 Answering the question directly...")
+    print("\nAnswering the question directly...")
 
     prompt = f"""
 Answer the following question clearly and concisely.

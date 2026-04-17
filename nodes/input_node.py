@@ -2,7 +2,7 @@ from state import AgentState
 
 
 def input_node(state: AgentState) -> AgentState:
-    print(f"\n📥 Topic received: {state['topic']}")
+    print(f"\nTopic received: {state['topic']}")
 
     # fill in default values for all other fields
     return {

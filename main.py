@@ -29,7 +29,7 @@ def main():
         "final_output":     "",
     }
 
-    print("\n🚀 Starting the workflow...\n")
+    print("\nStarting the workflow...\n")
 
     # run the graph from start to finish
     result = app.invoke(initial_state)

@@ -3,7 +3,7 @@ from ddgs import DDGS
 
 
 def web_search_node(state: AgentState) -> AgentState:
-    print(f"\n🔍 Searching the web for: {state['topic']}")
+    print(f"\nSearching the web for: {state['topic']}")
 
     results = DDGS().text(state["topic"], max_results=5)
 

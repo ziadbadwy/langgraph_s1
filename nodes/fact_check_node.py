@@ -3,7 +3,7 @@ from llm import ask_llm
 
 
 def fact_check_node(state: AgentState) -> AgentState:
-    print("\n✅ Fact checking the research...")
+    print("\nFact checking the research...")
 
     prompt = f"""
 You are a fact checker. Read the research below and give it a quality score from 1 to 10.

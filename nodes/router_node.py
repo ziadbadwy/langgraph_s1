@@ -3,7 +3,7 @@ from llm import ask_llm
 
 
 def router_node(state: AgentState) -> AgentState:
-    print("\n🔀 Routing the topic...")
+    print("\nRouting the topic...")
 
     prompt = f"""
 You are a classifier. Read the topic below and classify it into one of these three categories:

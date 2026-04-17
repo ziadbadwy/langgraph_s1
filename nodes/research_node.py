@@ -3,7 +3,7 @@ from llm import ask_llm
 
 
 def research_node(state: AgentState) -> AgentState:
-    print("\n📚 Writing research based on search results...")
+    print("\nWriting research based on search results...")
 
     prompt = f"""
 You are a researcher. Use the search results below to write a detailed research summary about the topic.

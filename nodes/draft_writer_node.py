@@ -3,7 +3,7 @@ from llm import ask_llm
 
 
 def draft_writer_node(state: AgentState) -> AgentState:
-    print("\n✍️  Writing the draft article...")
+    print("\nWriting the draft article...")
 
     # use summary if available, otherwise fall back to raw research
     content = state.get("summary") or state.get("research", "")
