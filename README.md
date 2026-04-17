@@ -24,34 +24,6 @@ A full LangGraph workflow that takes any topic, searches the web, researches it,
 
 ![Graph](assets/graph.png)
 
-```
-[START]
-   │
-   ▼
-[input_node]
-   │
-   ▼
-[router_node]
-   │
-   ├── research ──► [web_search_node] ──► [research_node] ──► [fact_check_node]
-   │                                                                │
-   │                                               score < 6 ◄─────┘ (loop back)
-   │                                               score >= 6 ──► [summarize_node]
-   │                                                                    │
-   ├── simple ──► [direct_answer_node] ─────────────────────────────── ┤
-   │                                                                    │
-   └── clarify ──► [clarify_node] ──► [END]                            ▼
-                                                              [draft_writer_node]
-                                                                        │
-                                                              [quality_check_node]
-                                                                        │
-                                                  score < 7 ◄───────────┘ (loop back)
-                                                  score >= 7 ──► [format_output_node] ──► [END]
-                                                       │
-                                                [revision_node]
-                                                       │
-                                                       └──► [quality_check_node]
-```
 
 ---
 
