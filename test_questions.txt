@@ -1,0 +1,58 @@
+============================================================
+  TEST QUESTIONS — Research & Writing Assistant
+============================================================
+
+------------------------------------------------------------
+[1] RESEARCH PATH
+    Flow: router → web_search → research → fact_check
+          → summarize → draft_writer → quality_check
+          → (revision) → format_output
+------------------------------------------------------------
+1. What is quantum computing and how does it work?
+2. What are the latest developments in AI in 2024?
+3. How does the human immune system fight viruses?
+4. What is the impact of climate change on ocean life?
+5. How do large language models like GPT work?
+
+------------------------------------------------------------
+[2] SIMPLE / DIRECT ANSWER PATH
+    Flow: router → direct_answer → draft_writer
+          → quality_check → format_output
+------------------------------------------------------------
+1. What is the capital of France?
+2. What does CPU stand for?
+3. Who wrote Romeo and Juliet?
+4. What color is the sky?
+5. What is 2 + 2?
+
+------------------------------------------------------------
+[3] CLARIFY PATH
+    Flow: router → clarify → END
+------------------------------------------------------------
+1. things
+2. tell me about it
+3. what about that stuff?
+4. explain
+5. I want to know more
+
+------------------------------------------------------------
+[4] LOOP STRESS TESTS
+    These are designed to trigger revision and fact-check loops
+------------------------------------------------------------
+1. Explain the entire history of the Roman Empire in detail   → quality_check loop
+2. What are all the theories about dark matter and dark energy? → fact_check loop
+3. Give a comprehensive analysis of the global economy        → both loops
+4. Explain every branch of mathematics                        → quality_check loop
+
+------------------------------------------------------------
+[5] WEB SEARCH QUALITY TESTS
+    These test if DuckDuckGo returns useful real-world results
+------------------------------------------------------------
+1. What happened in the news this week?
+2. Who won the latest FIFA World Cup?
+3. What is the current price of Bitcoin?
+4. What are the newest Python features in 2024?
+
+============================================================
+  TIP: Start with category [1] or [2] for the cleanest demo
+============================================================
