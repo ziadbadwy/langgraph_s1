@@ -9,4 +9,4 @@ def router_edge(state: AgentState) -> str:
     elif intent == "clarify":
         return "clarify"
     else:
-        return "web_search"
+        return "query_planner"

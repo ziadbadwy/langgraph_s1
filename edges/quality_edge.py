@@ -7,6 +7,6 @@ def quality_edge(state: AgentState) -> str:
 
     # move forward if quality is good OR we already revised twice (to avoid infinite loop)
     if score >= 7 or revision_count >= 2:
-        return "format_output"
+        return "reflection"
     else:
         return "revision"

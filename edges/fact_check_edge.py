@@ -8,4 +8,4 @@ def fact_check_edge(state: AgentState) -> str:
     if score < 6:
         return "research"
     else:
-        return "summarize"
+        return "critique"

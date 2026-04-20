@@ -1,3 +1,4 @@
+import uuid
 from graph import build_graph
 
 
@@ -6,36 +7,32 @@ def main():
     print("   Research & Writing Assistant  (powered by LangGraph)")
     print("=" * 60)
 
-    topic = input("\nEnter your topic or question: ").strip()
+    print("\nEnter a session ID to continue a previous conversation,")
+    session_id = input("or press Enter to start a new session: ").strip()
 
-    if not topic:
-        print("No topic entered. Exiting.")
-        return
+    if not session_id:
+        session_id = str(uuid.uuid4())
+        print(f"New session started: {session_id}")
+    else:
+        print(f"Resuming session: {session_id}")
 
-    # build and compile the graph
-    app = build_graph()
+    config = {"configurable": {"thread_id": session_id}}
+    app    = build_graph()
 
-    # define the starting state
-    initial_state = {
-        "topic":            topic,
-        "intent":           "",
-        "search_results":   "",
-        "research":         "",
-        "fact_check_score": 0,
-        "summary":          "",
-        "draft":            "",
-        "quality_score":    0,
-        "revision_count":   0,
-        "final_output":     "",
-    }
+    while True:
+        print("\n" + "-" * 60)
+        topic = input("Enter your topic (or 'exit' to quit): ").strip()
 
-    print("\nStarting the workflow...\n")
+        if topic.lower() == "exit":
+            print("Goodbye!")
+            break
 
-    # run the graph from start to finish
-    result = app.invoke(initial_state)
+        if not topic:
+            continue
 
-    # print the final result
-    print(result["final_output"])
+        print("\nStarting the workflow...\n")
+        result = app.invoke({"topic": topic}, config=config)
+        print(result["final_output"])
 
 
 if __name__ == "__main__":
